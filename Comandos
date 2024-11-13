@@ -1,0 +1,71 @@
+Anotações importantes Genexus.
+Comandos mais utilizados.
+======================
+1 - Definição de Variáveis
+
+&CustomerName = "João"
+&OrderTotal = 150.50
+&IsApproved = True
+======================
+2 - Eventos Comuns
+
+Event Start
+   &Message = "Bem-vindo ao painel!"
+EndEvent
+======================
+Event 'Save'
+   // Código para salvar dados
+EndEvent
+======================
+Event Load
+   For Each
+      &CustomerName = Customer.Name
+   EndFor
+EndEvent
+======================
+3 - Controle de Fluxo
+
+If &OrderTotal > 100
+   &Discount = 0.10
+Else
+   &Discount = 0.05
+EndIf
+=====================
+For Each
+   &ProductName = Product.Name
+EndFor
+=====================
+4 - Chamadas de Procedimentos
+
+Call(ProcedureName, &Parameter1, &Parameter2)
+=====================
+5 - Manipulação de Strings e Números
+
+&FullName = Trim(&FirstName) + " " + Trim(&LastName)
+&Total = &Quantity * &UnitPrice
+=====================
+6 - Work With for Web (WW)
+
+WWProduct.List()
+=====================
+
+7 - Commit e Rollback
+
+Commit
+Rollback
+=====================
+
+8 - Interação com o Front-End
+
+&ControlName.Visible = True
+======================
+
+9 - Chamadas a APIs Externas (REST / SOAP)
+
+&Response = HttpClient.Post(&URL, &RequestData)
+=====================
+
+10 - Manipulação de Data e Hora
+
+&Today = Today()  // Retorna a data de hoje
+&Now = Now()      // Retorna a data e hora atuais
